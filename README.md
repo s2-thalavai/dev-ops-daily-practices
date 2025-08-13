@@ -3,7 +3,7 @@
 Powershell Command to send mail using Azure ACS SMTP Relay
     
     $Password = ConvertTo-SecureString -AsPlainText -Force -String 'your-smtp-password'
-    $Cred = New-Object -TypeName PSCredential -ArgumentList 'your-smtp-username@azurecomm.net', $Password
+    $Cred = New-Object -TypeName PSCredential -ArgumentList 'ur-smtp-username@azurecomm.net', $Password
     
     Send-MailMessage -From 'your-smtp-username@azurecomm.net' `
     -To 'sivasankar.thalavai@gmail.com' `
