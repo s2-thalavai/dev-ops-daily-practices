@@ -21,7 +21,7 @@ Bash Shell Command to send mail using Azure ACS SMTP Relay
 
     sudo apt install swaks
     
-    swaks --to sivasankar.thalavai@marlabs.com \
+    swaks --to s2.thalavai@gmail.com \
       --from your-smtp-username@azurecomm.net \
       --server smtp.office365.com \
       --port 587 \
