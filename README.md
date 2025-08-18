@@ -1,5 +1,80 @@
 # dev-ops-daily-practices
 
+## Docker Compose
+
+Docker Compose is a powerful tool that simplifies the management of multi-container applications. 
+Instead of manually starting each container with its own configuration, you define everything in a single docker-compose.yml file 
+and launch your entire stack with one command. 
+
+Here's a quick breakdown:
+
+🧩 What Docker Compose Does
+    
+    Defines services: Each containerized service (e.g., web app, database, cache) is described in YAML.
+    
+    Manages networks and volumes: Automatically sets up communication and persistent storage.
+    
+    Orchestrates lifecycle: Start, stop, rebuild, and monitor services with simple commands.
+
+📄 Sample docker-compose.yml
+
+yaml
+        
+        version: '3.8'
+        services:
+          web:
+            image: nginx:latest
+            ports:
+              - "80:80"
+          app:
+            build: .
+            depends_on:
+              - db
+          db:
+            image: postgres:14
+            environment:
+              POSTGRES_USER: user
+              POSTGRES_PASSWORD: pass
+              
+🚀 Common Commands
+        
+        docker compose up – Start all services
+        
+        docker compose down – Stop and remove containers, networks, volumes
+        
+        docker compose build – Build images defined in the file
+        
+        docker compose logs – View logs from all services
+
+### Steps to Install Docker Compose (Linux)
+    
+    1. Prerequisite: Docker Engine
+       
+        Make sure Docker is already installed:
+        
+            docker --version
+    
+    2. Download Docker Compose Plugin
+    
+            sudo curl -L "https://github.com/docker/compose/releases/download/v2.38.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+       
+    This grabs the latest stable release from the official GitHub repo.
+    
+    4. Make It Executable
+    
+            sudo chmod +x /usr/local/bin/docker-compose
+       
+    6. Verify Installation
+    
+            docker-compose --version
+       
+    should see something like:
+    
+    <img width="760" height="276" alt="image" src="https://github.com/user-attachments/assets/2cbf3b53-56fb-4d24-b184-1fa7e539fc31" />
+
+
+==========================================================================================================
+
 Powershell Command to send mail using Azure ACS SMTP Relay
     
     $Password = ConvertTo-SecureString -AsPlainText -Force -String 'your-smtp-password'
