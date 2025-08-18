@@ -26,6 +26,8 @@ WSL 2 enabled (for Home edition users)
 
 Then log out and back in.
 
+<img width="877" height="546" alt="image" src="https://github.com/user-attachments/assets/91364ae6-d537-4b4c-8f83-4ba107ce32a8" />
+
 ## Docker Compose
 
 Docker Compose is a powerful tool that simplifies the management of multi-container applications. 
@@ -64,13 +66,13 @@ yaml
               
 🚀 Common Commands
         
-        docker compose up – Start all services
+        docker-compose up – Start all services
         
-        docker compose down – Stop and remove containers, networks, volumes
+        docker-compose down – Stop and remove containers, networks, volumes
         
-        docker compose build – Build images defined in the file
+        docker-compose build – Build images defined in the file
         
-        docker compose logs – View logs from all services
+        docker-compose logs – View logs from all services
 
 ### Steps to Install Docker Compose (Linux)
     
@@ -81,7 +83,9 @@ yaml
             docker --version
     
     2. Download Docker Compose Plugin
-    
+
+            sudo apt-get update && sudo apt-get install docker-buildx
+
             sudo curl -L "https://github.com/docker/compose/releases/download/v2.38.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
        
     This grabs the latest stable release from the official GitHub repo.
