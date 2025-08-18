@@ -103,7 +103,7 @@ yaml
 <img width="760" height="276" alt="image" src="https://github.com/user-attachments/assets/2cbf3b53-56fb-4d24-b184-1fa7e539fc31" />
 
 
-==========================================================================================================
+======================================================================
 
 Powershell Command to send mail using Azure ACS SMTP Relay
     
