@@ -1,5 +1,31 @@
 # dev-ops-daily-practices
 
+## Docker:
+
+To install Docker on system, the steps vary slightly depending on your operating system. Here's a streamlined guide for each platform:
+
+WSL 2 enabled (for Home edition users)
+
+🐧 For Linux (Ubuntu/Debian)
+    
+    🛠️ Install Docker Engine
+    
+        sudo apt update
+        sudo apt install docker.io -y
+        sudo systemctl start docker
+        sudo systemctl enable docker
+    
+    🔍 Verify Installation
+    
+        docker --version
+        sudo docker run hello-world
+    
+    To run Docker without sudo, add your user to the Docker group:
+    
+        sudo usermod -aG docker $USER
+
+Then log out and back in.
+
 ## Docker Compose
 
 Docker Compose is a powerful tool that simplifies the management of multi-container applications. 
